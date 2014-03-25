@@ -2,4 +2,5 @@ name: graphing
 description: A sample application
 dependencies:
   collection: any
+dev_dependencies:
   unittest: any
