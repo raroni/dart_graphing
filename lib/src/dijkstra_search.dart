@@ -1,11 +1,5 @@
 part of graphing;
 
-class SearchFrontier {
-  Node node;
-  num cost;
-  SearchFrontier(Node this.node, num this.cost);
-}
-
 class DijkstraSearch<NodeType extends Node> {
   Graph graph;
   Node sourceNode;
