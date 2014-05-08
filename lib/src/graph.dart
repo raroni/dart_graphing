@@ -14,10 +14,18 @@ class Graph<NodeType extends Node> {
   num get nodesCount => nodes.length;
   
   void addEdge(Edge edge) {
-     _edgeLists[edge.originNodeIndex].add(edge);
+    _edgeLists[edge.originNodeIndex].add(edge);
+  }
+  
+  void removeEdge(Edge edge) {
+    _edgeLists[edge.originNodeIndex].remove(edge);
   }
   
   List<Edge> getEdgesByNodeIndex(int nodeIndex) {
     return _edgeLists[nodeIndex];
+  }
+  
+  List<Edge> getEdgesByNode(Node node) {
+    return getEdgesByNodeIndex(node.index);
   }
 }
